@@ -1,0 +1,29 @@
+{
+  "name": "frontenddevenv",
+  "version": "1.0.0",
+  "description": "My frontend\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001bThe develop enviroment for frontend",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://kotar0@github.com/kotar0/frontenddevenv.git"
+  },
+  "keywords": [
+    "frontend"
+  ],
+  "author": "kotaro okuya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kotar0/frontenddevenv/issues"
+  },
+  "homepage": "https://github.com/kotar0/frontenddevenv#readme",
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "browser-sync": "^2.14.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0"
+  }
+}
