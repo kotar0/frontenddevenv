@@ -1,0 +1,25 @@
+{
+  "name": "frontenddevenv",
+  "description": "bower packages",
+  "main": "index.html",
+  "authors": [
+    "kotaro okuya"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "frontend"
+  ],
+  "homepage": "https://github.com/kotar0/frontenddevenv",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jQuery": "^3.1.0",
+    "jquery-1.10.2": "jQuery#1.10.2",
+    "jquery-2.1.0": "jQuery#2.1.0"
+  }
+}
