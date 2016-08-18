@@ -1,0 +1,29 @@
+.test {
+  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .test .aaa {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+
+.test {
+  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .test .aaa {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+
+.aaa {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.aaa {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
