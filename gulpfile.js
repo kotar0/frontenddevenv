@@ -6,7 +6,7 @@ var postcss = require('gulp-postcss');
 var cssnext = require('postcss-cssnext');
 var sourcemaps = require('gulp-sourcemaps');
 var processors = [cssnext()]; //cssnextのオプション等指定。
-var plumber = require('gulp-plumber');//処理を止めないように
+
 
 
 
@@ -17,7 +17,6 @@ gulp.task('sass', function () {
       outputStyle: 'expanded',
       sourcemap: true
     }))
-    .pipe(plumber())
     .on('error', function (err) {
       console.log(err.message);
     })
@@ -48,15 +47,10 @@ gulp.task('server', function () {
   });
 })
 
-gulp.task('reload', function(){
-  sync.reload();
-})
-
 //Watchタスクを別のタスクと分けて書いている
 //Write dowm watch task apart from others.
 gulp.task('watch', function () {
   gulp.watch('dev/sass/*.scss', ['sass']);
-  gulp.watch('docs/**', ['reload']);
 })
 
 gulp.task('default', ['server', 'watch'], function () {
