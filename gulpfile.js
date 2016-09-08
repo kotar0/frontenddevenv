@@ -1,13 +1,16 @@
-var gulp = require('gulp');
-var watch = require('gulp-watch');
-var sync = require('browser-sync');
-var sass = require('gulp-sass');
-var postcss = require('gulp-postcss');
-var cssnext = require('postcss-cssnext');
-var sourcemaps = require('gulp-sourcemaps');
-var processors = [cssnext()]; //cssnextのオプション等指定。
-var plumber = require('gulp-plumber');//処理を止めないように
-
+var gulp = require('gulp'),
+    watch = require('gulp-watch'),
+    sync = require('browser-sync'),
+    sass = require('gulp-sass'),
+    postcss = require('gulp-postcss'),
+    cssnext = require('postcss-cssnext'),
+    sourcemaps = require('gulp-sourcemaps'),
+    processors = [cssnext()], //cssnextのオプション等指定。
+    plumber = require('gulp-plumber'),//処理を止めないように
+    imagemin   = require("gulp-imagemin"),//画像圧縮用
+    jpegtran = require('imagemin-jpegtran'),//圧縮処理JPG
+    optipng = require('imagemin-optipng'),//圧縮処理PNG
+    pngquant   = require("imagemin-pngquant");
 
 
 gulp.task('sass', function () {
@@ -38,6 +41,17 @@ gulp.task('publish', function () {
     .pipe(postcss(processors)) //prefixなどを追加
     .pipe(gulp.dest('publish/css/'))
 })
+
+//圧縮処理をする
+gulp.task("imgmin", function() {
+  gulp.src('original_images/*.png')
+      .pipe(imagemin({
+        progressive       : true,
+        use               : [pngquant()],
+        optimizationLevel : 7
+      }))
+      .pipe(gulp.dest('optimized_images'));
+});
 
 //Browsersync
 gulp.task('server', function () {
