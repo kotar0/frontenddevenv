@@ -1,15 +1,16 @@
-.test{
-  width: 100px;
-  display: flex;
-  .aaa{
-    display: flex;
-  }
+.test {
+    display : flex;
+    width : 100px;
+    .aaa {
+        display : flex;
+        width : 100%;
+    }
 }
 
-.test{
-  width: 100px;
-  display: flex;
-  .aaa{
-    display: flex;
-  }
+.test {
+    display : flex;
+    width : 100px;
+    .aaa {
+        display : flex;
+    }
 }

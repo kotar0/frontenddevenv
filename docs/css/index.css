@@ -1,27 +1,27 @@
 .test {
-  width: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+    display : -webkit-box;
+    display : -ms-flexbox;
+    display : flex;
+    width : 100px;
 }
 
 .test .aaa {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+    display : -webkit-box;
+    display : -ms-flexbox;
+    display : flex;
+    width : 100%;
 }
 
 .test {
-  width: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+    display : -webkit-box;
+    display : -ms-flexbox;
+    display : flex;
+    width : 100px;
 }
 
 .test .aaa {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+    display : -webkit-box;
+    display : -ms-flexbox;
+    display : flex;
 }
-
 /*# sourceMappingURL=maps/index.css.map */
