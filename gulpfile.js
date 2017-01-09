@@ -10,7 +10,12 @@ var plumber = require('gulp-plumber'); //処理を止めないように
 var csscomb = require('gulp-csscomb');
 var ts = require('gulp-typescript');
 var babel = require('gulp-babel');
-var webpack = require('gulp-webpack');
+var webpack = require('gulp-webpack')
+,plumber = require('gulp-plumber'),//処理を止めないように
+,imagemin   = require("gulp-imagemin")//画像圧縮用
+,jpegtran = require('imagemin-jpegtran')//圧縮処理JPG
+,optipng = require('imagemin-optipng')//圧縮処理PNG
+,pngquant   = require("imagemin-pngquant");
 
 
 gulp.task('ts', function () {
@@ -69,6 +74,17 @@ gulp.task('publish', function () {
     .pipe(postcss(processors)) //prefixなどを追加
     .pipe(gulp.dest('publish/css/'))
 })
+
+//圧縮処理をする
+gulp.task("imgmin", function() {
+  gulp.src('original_images/*.png')
+      .pipe(imagemin({
+        progressive       : true,
+        use               : [pngquant()],
+        optimizationLevel : 7
+      }))
+      .pipe(gulp.dest('optimized_images'));
+});
 
 //Browsersync
 gulp.task('server', function () {
